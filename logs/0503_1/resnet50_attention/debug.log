@@ -1,0 +1,159 @@
+2021-05-05 04:51:26,639 - [train_attntn.py:25-<module>()] - INFO - Start Initialization
+2021-05-05 04:51:26,728 - [train_attntn.py:44-parepareDataset()] - INFO - Prepare dataset for training
+2021-05-05 04:51:43,556 - [train_attntn.py:87-parepareDataset()] - INFO - Dataset Preparation Complete
+2021-05-05 04:51:43,556 - [train_attntn.py:94-prepareLoader()] - INFO - Prepare dataloader for training
+2021-05-05 04:51:43,557 - [train_attntn.py:106-prepareLoader()] - INFO - Dataloader Preparation Complete
+2021-05-05 04:51:43,557 - [glove.py:22-embedding_matrix_creator()] - INFO - Preparing embedding matrix
+2021-05-05 04:52:19,069 - [glove.py:32-embedding_matrix_creator()] - INFO - Finish embedding matrix preparation
+2021-05-05 04:52:22,624 - [train_attntn.py:220-train()] - INFO - Start training
+2021-05-05 05:02:18,224 - [train_attntn.py:141-train_step()] - INFO - Epoch [1/50]  train_loss: 3.9777 train_acc: 0.3307
+2021-05-05 05:05:29,478 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.5227 val_acc: 0.0000
+2021-05-05 05:05:29,479 - [train_attntn.py:244-train()] - INFO - Epoch [1/50] train_bleu1: 0.3922 train_bleu2: 0.2322 train_bleu3: 0.1347 train_bleu4: 0.0778 train_meteor: 0.3168555202874281val_bleu1: 0.3933 val_bleu2: 0.2322 val_bleu3: 0.1351 val_bleu4: 0.0784 val_meteor: 0.3126447064874519
+2021-05-05 05:14:36,444 - [train_attntn.py:141-train_step()] - INFO - Epoch [2/50]  train_loss: 3.3268 train_acc: 0.3894
+2021-05-05 05:17:12,724 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.6455 val_acc: 0.0000
+2021-05-05 05:17:12,725 - [train_attntn.py:244-train()] - INFO - Epoch [2/50] train_bleu1: 0.5809 train_bleu2: 0.3625 train_bleu3: 0.2244 train_bleu4: 0.1371 train_meteor: 0.36055182886127324val_bleu1: 0.5731 val_bleu2: 0.3496 val_bleu3: 0.2139 val_bleu4: 0.1294 val_meteor: 0.35010665311146627
+2021-05-05 05:25:50,732 - [train_attntn.py:141-train_step()] - INFO - Epoch [3/50]  train_loss: 3.1125 train_acc: 0.4083
+2021-05-05 05:28:44,672 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.7109 val_acc: 0.0000
+2021-05-05 05:28:44,672 - [train_attntn.py:244-train()] - INFO - Epoch [3/50] train_bleu1: 0.5060 train_bleu2: 0.3047 train_bleu3: 0.1847 train_bleu4: 0.1110 train_meteor: 0.3385270082511306val_bleu1: 0.4915 val_bleu2: 0.2914 val_bleu3: 0.1740 val_bleu4: 0.1022 val_meteor: 0.32415261025335973
+2021-05-05 05:36:46,131 - [train_attntn.py:141-train_step()] - INFO - Epoch [4/50]  train_loss: 2.9677 train_acc: 0.4214
+2021-05-05 05:39:34,165 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.8413 val_acc: 0.0000
+2021-05-05 05:39:34,166 - [train_attntn.py:244-train()] - INFO - Epoch [4/50] train_bleu1: 0.4256 train_bleu2: 0.2661 train_bleu3: 0.1641 train_bleu4: 0.1001 train_meteor: 0.37037509160881665val_bleu1: 0.4146 val_bleu2: 0.2528 val_bleu3: 0.1515 val_bleu4: 0.0883 val_meteor: 0.3517596102121534
+2021-05-05 05:47:20,174 - [train_attntn.py:141-train_step()] - INFO - Epoch [5/50]  train_loss: 2.8513 train_acc: 0.4315
+2021-05-05 05:49:49,754 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.9249 val_acc: 0.0000
+2021-05-05 05:49:49,755 - [train_attntn.py:244-train()] - INFO - Epoch [5/50] train_bleu1: 0.6311 train_bleu2: 0.4185 train_bleu3: 0.2781 train_bleu4: 0.1833 train_meteor: 0.3920207692104371val_bleu1: 0.6173 val_bleu2: 0.3977 val_bleu3: 0.2561 val_bleu4: 0.1638 val_meteor: 0.37181873833366513
+2021-05-05 05:57:54,782 - [train_attntn.py:141-train_step()] - INFO - Epoch [6/50]  train_loss: 2.7588 train_acc: 0.4404
+2021-05-05 06:00:31,721 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.8889 val_acc: 0.0000
+2021-05-05 06:00:31,722 - [train_attntn.py:244-train()] - INFO - Epoch [6/50] train_bleu1: 0.5951 train_bleu2: 0.3876 train_bleu3: 0.2527 train_bleu4: 0.1636 train_meteor: 0.4022498377736084val_bleu1: 0.5736 val_bleu2: 0.3597 val_bleu3: 0.2252 val_bleu4: 0.1393 val_meteor: 0.37356721796641046
+2021-05-05 06:09:24,328 - [train_attntn.py:141-train_step()] - INFO - Epoch [7/50]  train_loss: 2.6805 train_acc: 0.4480
+2021-05-05 06:12:43,164 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 2.9815 val_acc: 0.0000
+2021-05-05 06:12:43,165 - [train_attntn.py:244-train()] - INFO - Epoch [7/50] train_bleu1: 0.6159 train_bleu2: 0.4133 train_bleu3: 0.2774 train_bleu4: 0.1848 train_meteor: 0.4231376075818752val_bleu1: 0.5907 val_bleu2: 0.3824 val_bleu3: 0.2462 val_bleu4: 0.1557 val_meteor: 0.3945208009455138
+2021-05-05 06:23:54,057 - [train_attntn.py:141-train_step()] - INFO - Epoch [8/50]  train_loss: 2.6108 train_acc: 0.4554
+2021-05-05 06:27:02,749 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.1717 val_acc: 0.0000
+2021-05-05 06:27:02,750 - [train_attntn.py:244-train()] - INFO - Epoch [8/50] train_bleu1: 0.6601 train_bleu2: 0.4545 train_bleu3: 0.3148 train_bleu4: 0.2160 train_meteor: 0.41561856057847824val_bleu1: 0.6323 val_bleu2: 0.4174 val_bleu3: 0.2777 val_bleu4: 0.1811 val_meteor: 0.38683311841145696
+2021-05-05 06:38:04,855 - [train_attntn.py:141-train_step()] - INFO - Epoch [9/50]  train_loss: 2.5477 train_acc: 0.4611
+2021-05-05 06:41:21,494 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.2000 val_acc: 0.0000
+2021-05-05 06:41:21,494 - [train_attntn.py:244-train()] - INFO - Epoch [9/50] train_bleu1: 0.6063 train_bleu2: 0.4106 train_bleu3: 0.2781 train_bleu4: 0.1885 train_meteor: 0.4238976601542434val_bleu1: 0.5787 val_bleu2: 0.3768 val_bleu3: 0.2444 val_bleu4: 0.1559 val_meteor: 0.39437108492426076
+2021-05-05 06:51:10,061 - [train_attntn.py:141-train_step()] - INFO - Epoch [10/50]  train_loss: 2.4910 train_acc: 0.4686
+2021-05-05 06:54:54,614 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.2512 val_acc: 0.0000
+2021-05-05 06:54:54,614 - [train_attntn.py:244-train()] - INFO - Epoch [10/50] train_bleu1: 0.6409 train_bleu2: 0.4428 train_bleu3: 0.3067 train_bleu4: 0.2127 train_meteor: 0.42126538658264107val_bleu1: 0.6061 val_bleu2: 0.3981 val_bleu3: 0.2613 val_bleu4: 0.1698 val_meteor: 0.38558714501595026
+2021-05-05 07:03:44,104 - [train_attntn.py:141-train_step()] - INFO - Epoch [11/50]  train_loss: 2.4357 train_acc: 0.4739
+2021-05-05 07:06:28,494 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.4822 val_acc: 0.0000
+2021-05-05 07:06:28,495 - [train_attntn.py:244-train()] - INFO - Epoch [11/50] train_bleu1: 0.6218 train_bleu2: 0.4314 train_bleu3: 0.3000 train_bleu4: 0.2078 train_meteor: 0.44391400507493955val_bleu1: 0.5956 val_bleu2: 0.3912 val_bleu3: 0.2578 val_bleu4: 0.1691 val_meteor: 0.4032471867918666
+2021-05-05 07:15:43,194 - [train_attntn.py:141-train_step()] - INFO - Epoch [12/50]  train_loss: 2.3882 train_acc: 0.4808
+2021-05-05 07:18:53,423 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.5558 val_acc: 0.0000
+2021-05-05 07:18:53,424 - [train_attntn.py:244-train()] - INFO - Epoch [12/50] train_bleu1: 0.6577 train_bleu2: 0.4653 train_bleu3: 0.3294 train_bleu4: 0.2327 train_meteor: 0.4474978961938479val_bleu1: 0.6154 val_bleu2: 0.4120 val_bleu3: 0.2732 val_bleu4: 0.1794 val_meteor: 0.40403624598389654
+2021-05-05 07:29:57,363 - [train_attntn.py:141-train_step()] - INFO - Epoch [13/50]  train_loss: 2.3400 train_acc: 0.4857
+2021-05-05 07:33:37,470 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.6687 val_acc: 0.0000
+2021-05-05 07:33:37,470 - [train_attntn.py:244-train()] - INFO - Epoch [13/50] train_bleu1: 0.6573 train_bleu2: 0.4562 train_bleu3: 0.3165 train_bleu4: 0.2211 train_meteor: 0.4389078756869589val_bleu1: 0.6220 val_bleu2: 0.4071 val_bleu3: 0.2649 val_bleu4: 0.1712 val_meteor: 0.3992432325959585
+2021-05-05 07:44:22,588 - [train_attntn.py:141-train_step()] - INFO - Epoch [14/50]  train_loss: 2.2960 train_acc: 0.4913
+2021-05-05 07:47:39,258 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.7398 val_acc: 0.0000
+2021-05-05 07:47:39,258 - [train_attntn.py:244-train()] - INFO - Epoch [14/50] train_bleu1: 0.6313 train_bleu2: 0.4423 train_bleu3: 0.3100 train_bleu4: 0.2180 train_meteor: 0.4510691595451452val_bleu1: 0.5908 val_bleu2: 0.3886 val_bleu3: 0.2552 val_bleu4: 0.1673 val_meteor: 0.39633194358625595
+2021-05-05 07:59:17,926 - [train_attntn.py:141-train_step()] - INFO - Epoch [15/50]  train_loss: 2.2548 train_acc: 0.4966
+2021-05-05 08:02:25,293 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.8147 val_acc: 0.0000
+2021-05-05 08:02:25,294 - [train_attntn.py:244-train()] - INFO - Epoch [15/50] train_bleu1: 0.6776 train_bleu2: 0.4864 train_bleu3: 0.3520 train_bleu4: 0.2536 train_meteor: 0.4535820139414807val_bleu1: 0.6315 val_bleu2: 0.4192 val_bleu3: 0.2781 val_bleu4: 0.1832 val_meteor: 0.39919666781023067
+2021-05-05 08:13:11,816 - [train_attntn.py:141-train_step()] - INFO - Epoch [16/50]  train_loss: 2.2163 train_acc: 0.5011
+2021-05-05 08:16:37,683 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.9635 val_acc: 0.0000
+2021-05-05 08:16:37,683 - [train_attntn.py:244-train()] - INFO - Epoch [16/50] train_bleu1: 0.6786 train_bleu2: 0.4877 train_bleu3: 0.3518 train_bleu4: 0.2550 train_meteor: 0.4710167133229298val_bleu1: 0.6305 val_bleu2: 0.4127 val_bleu3: 0.2715 val_bleu4: 0.1755 val_meteor: 0.4098506982047979
+2021-05-05 08:28:05,154 - [train_attntn.py:141-train_step()] - INFO - Epoch [17/50]  train_loss: 2.1818 train_acc: 0.5051
+2021-05-05 08:30:59,619 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 3.9946 val_acc: 0.0000
+2021-05-05 08:30:59,619 - [train_attntn.py:244-train()] - INFO - Epoch [17/50] train_bleu1: 0.6531 train_bleu2: 0.4664 train_bleu3: 0.3361 train_bleu4: 0.2432 train_meteor: 0.4738437953503655val_bleu1: 0.5992 val_bleu2: 0.3905 val_bleu3: 0.2555 val_bleu4: 0.1659 val_meteor: 0.40939680038396703
+2021-05-05 08:43:27,592 - [train_attntn.py:141-train_step()] - INFO - Epoch [18/50]  train_loss: 2.1517 train_acc: 0.5095
+2021-05-05 08:47:02,712 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.1228 val_acc: 0.0000
+2021-05-05 08:47:02,713 - [train_attntn.py:244-train()] - INFO - Epoch [18/50] train_bleu1: 0.6816 train_bleu2: 0.4924 train_bleu3: 0.3577 train_bleu4: 0.2609 train_meteor: 0.4732197406820657val_bleu1: 0.6217 val_bleu2: 0.4058 val_bleu3: 0.2647 val_bleu4: 0.1726 val_meteor: 0.3969154795151583
+2021-05-05 08:59:32,361 - [train_attntn.py:141-train_step()] - INFO - Epoch [19/50]  train_loss: 2.1142 train_acc: 0.5152
+2021-05-05 09:03:20,491 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.3273 val_acc: 0.0000
+2021-05-05 09:03:20,492 - [train_attntn.py:244-train()] - INFO - Epoch [19/50] train_bleu1: 0.6829 train_bleu2: 0.4949 train_bleu3: 0.3604 train_bleu4: 0.2627 train_meteor: 0.46729302868975003val_bleu1: 0.6224 val_bleu2: 0.4145 val_bleu3: 0.2761 val_bleu4: 0.1827 val_meteor: 0.4002900234008562
+2021-05-05 09:16:46,158 - [train_attntn.py:141-train_step()] - INFO - Epoch [20/50]  train_loss: 2.0811 train_acc: 0.5187
+2021-05-05 09:21:31,155 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.0918 val_acc: 0.0000
+2021-05-05 09:21:31,155 - [train_attntn.py:244-train()] - INFO - Epoch [20/50] train_bleu1: 0.6724 train_bleu2: 0.4841 train_bleu3: 0.3521 train_bleu4: 0.2571 train_meteor: 0.46851878854402196val_bleu1: 0.6152 val_bleu2: 0.4020 val_bleu3: 0.2635 val_bleu4: 0.1707 val_meteor: 0.3994350611285361
+2021-05-05 09:34:32,495 - [train_attntn.py:141-train_step()] - INFO - Epoch [21/50]  train_loss: 2.0476 train_acc: 0.5234
+2021-05-05 09:38:12,506 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.2162 val_acc: 0.0000
+2021-05-05 09:38:12,507 - [train_attntn.py:244-train()] - INFO - Epoch [21/50] train_bleu1: 0.6740 train_bleu2: 0.4931 train_bleu3: 0.3635 train_bleu4: 0.2697 train_meteor: 0.48961418621665814val_bleu1: 0.6043 val_bleu2: 0.3924 val_bleu3: 0.2546 val_bleu4: 0.1645 val_meteor: 0.40896335672947237
+2021-05-05 09:49:46,506 - [train_attntn.py:141-train_step()] - INFO - Epoch [22/50]  train_loss: 2.0143 train_acc: 0.5292
+2021-05-05 09:53:30,884 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.4879 val_acc: 0.0000
+2021-05-05 09:53:30,884 - [train_attntn.py:244-train()] - INFO - Epoch [22/50] train_bleu1: 0.6544 train_bleu2: 0.4735 train_bleu3: 0.3466 train_bleu4: 0.2556 train_meteor: 0.4838675728910473val_bleu1: 0.5850 val_bleu2: 0.3814 val_bleu3: 0.2498 val_bleu4: 0.1615 val_meteor: 0.40743640239521106
+2021-05-05 10:09:38,699 - [train_attntn.py:141-train_step()] - INFO - Epoch [23/50]  train_loss: 1.9848 train_acc: 0.5337
+2021-05-05 10:14:11,107 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.4933 val_acc: 0.0000
+2021-05-05 10:14:11,107 - [train_attntn.py:244-train()] - INFO - Epoch [23/50] train_bleu1: 0.6835 train_bleu2: 0.5039 train_bleu3: 0.3759 train_bleu4: 0.2825 train_meteor: 0.5008818480937384val_bleu1: 0.6104 val_bleu2: 0.4020 val_bleu3: 0.2647 val_bleu4: 0.1718 val_meteor: 0.4148083268947302
+2021-05-05 10:24:03,920 - [train_attntn.py:141-train_step()] - INFO - Epoch [24/50]  train_loss: 1.9579 train_acc: 0.5377
+2021-05-05 10:26:55,320 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.7212 val_acc: 0.0000
+2021-05-05 10:26:55,321 - [train_attntn.py:244-train()] - INFO - Epoch [24/50] train_bleu1: 0.7082 train_bleu2: 0.5280 train_bleu3: 0.3985 train_bleu4: 0.3030 train_meteor: 0.4858633862850321val_bleu1: 0.6353 val_bleu2: 0.4222 val_bleu3: 0.2824 val_bleu4: 0.1868 val_meteor: 0.40091501883009034
+2021-05-05 10:38:39,042 - [train_attntn.py:141-train_step()] - INFO - Epoch [25/50]  train_loss: 1.9305 train_acc: 0.5419
+2021-05-05 10:42:30,374 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.8125 val_acc: 0.0000
+2021-05-05 10:42:30,374 - [train_attntn.py:244-train()] - INFO - Epoch [25/50] train_bleu1: 0.6906 train_bleu2: 0.5082 train_bleu3: 0.3777 train_bleu4: 0.2824 train_meteor: 0.49308820957889915val_bleu1: 0.6119 val_bleu2: 0.3976 val_bleu3: 0.2593 val_bleu4: 0.1669 val_meteor: 0.39986475354906614
+2021-05-05 10:55:24,088 - [train_attntn.py:141-train_step()] - INFO - Epoch [26/50]  train_loss: 1.9050 train_acc: 0.5455
+2021-05-05 10:58:29,929 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.6121 val_acc: 0.0000
+2021-05-05 10:58:29,929 - [train_attntn.py:244-train()] - INFO - Epoch [26/50] train_bleu1: 0.6939 train_bleu2: 0.5156 train_bleu3: 0.3868 train_bleu4: 0.2910 train_meteor: 0.49516108657023167val_bleu1: 0.6078 val_bleu2: 0.3982 val_bleu3: 0.2602 val_bleu4: 0.1671 val_meteor: 0.4026992661866271
+2021-05-05 11:12:01,162 - [train_attntn.py:141-train_step()] - INFO - Epoch [27/50]  train_loss: 1.8784 train_acc: 0.5495
+2021-05-05 11:17:17,434 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.8322 val_acc: 0.0000
+2021-05-05 11:17:17,434 - [train_attntn.py:244-train()] - INFO - Epoch [27/50] train_bleu1: 0.6582 train_bleu2: 0.4823 train_bleu3: 0.3591 train_bleu4: 0.2689 train_meteor: 0.49623629620135795val_bleu1: 0.5898 val_bleu2: 0.3854 val_bleu3: 0.2529 val_bleu4: 0.1640 val_meteor: 0.4099869254880226
+2021-05-05 11:33:01,425 - [train_attntn.py:141-train_step()] - INFO - Epoch [28/50]  train_loss: 1.8523 train_acc: 0.5538
+2021-05-05 11:37:18,127 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.9231 val_acc: 0.0000
+2021-05-05 11:37:18,128 - [train_attntn.py:244-train()] - INFO - Epoch [28/50] train_bleu1: 0.6733 train_bleu2: 0.4922 train_bleu3: 0.3636 train_bleu4: 0.2709 train_meteor: 0.4959619410736345val_bleu1: 0.5866 val_bleu2: 0.3764 val_bleu3: 0.2428 val_bleu4: 0.1546 val_meteor: 0.40409372682388234
+2021-05-05 11:51:41,563 - [train_attntn.py:141-train_step()] - INFO - Epoch [29/50]  train_loss: 1.8271 train_acc: 0.5576
+2021-05-05 11:56:02,119 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 4.8954 val_acc: 0.0000
+2021-05-05 11:56:02,120 - [train_attntn.py:244-train()] - INFO - Epoch [29/50] train_bleu1: 0.7021 train_bleu2: 0.5282 train_bleu3: 0.4020 train_bleu4: 0.3086 train_meteor: 0.5049647299306538val_bleu1: 0.6071 val_bleu2: 0.3963 val_bleu3: 0.2600 val_bleu4: 0.1665 val_meteor: 0.4034294577130665
+2021-05-05 12:10:26,453 - [train_attntn.py:141-train_step()] - INFO - Epoch [30/50]  train_loss: 1.8085 train_acc: 0.5610
+2021-05-05 12:14:11,743 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.0477 val_acc: 0.0000
+2021-05-05 12:14:11,744 - [train_attntn.py:244-train()] - INFO - Epoch [30/50] train_bleu1: 0.7036 train_bleu2: 0.5310 train_bleu3: 0.4058 train_bleu4: 0.3128 train_meteor: 0.5059878457977678val_bleu1: 0.6113 val_bleu2: 0.4002 val_bleu3: 0.2640 val_bleu4: 0.1716 val_meteor: 0.39522665236203525
+2021-05-05 12:26:45,620 - [train_attntn.py:141-train_step()] - INFO - Epoch [31/50]  train_loss: 1.7849 train_acc: 0.5654
+2021-05-05 12:30:25,263 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.0101 val_acc: 0.0000
+2021-05-05 12:30:25,264 - [train_attntn.py:244-train()] - INFO - Epoch [31/50] train_bleu1: 0.7049 train_bleu2: 0.5307 train_bleu3: 0.4059 train_bleu4: 0.3131 train_meteor: 0.5023914962738546val_bleu1: 0.6094 val_bleu2: 0.3994 val_bleu3: 0.2626 val_bleu4: 0.1699 val_meteor: 0.398605907714445
+2021-05-05 12:42:21,510 - [train_attntn.py:141-train_step()] - INFO - Epoch [32/50]  train_loss: 1.7608 train_acc: 0.5696
+2021-05-05 12:45:26,621 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.2717 val_acc: 0.0000
+2021-05-05 12:45:26,621 - [train_attntn.py:244-train()] - INFO - Epoch [32/50] train_bleu1: 0.7096 train_bleu2: 0.5372 train_bleu3: 0.4138 train_bleu4: 0.3218 train_meteor: 0.5035767012241147val_bleu1: 0.6165 val_bleu2: 0.4029 val_bleu3: 0.2628 val_bleu4: 0.1684 val_meteor: 0.39896751157982974
+2021-05-05 12:56:51,522 - [train_attntn.py:141-train_step()] - INFO - Epoch [33/50]  train_loss: 1.7419 train_acc: 0.5728
+2021-05-05 13:00:19,949 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.3032 val_acc: 0.0000
+2021-05-05 13:00:19,952 - [train_attntn.py:244-train()] - INFO - Epoch [33/50] train_bleu1: 0.7024 train_bleu2: 0.5310 train_bleu3: 0.4069 train_bleu4: 0.3159 train_meteor: 0.5071378892052119val_bleu1: 0.6130 val_bleu2: 0.4047 val_bleu3: 0.2693 val_bleu4: 0.1757 val_meteor: 0.4045530078402156
+2021-05-05 13:10:58,910 - [train_attntn.py:141-train_step()] - INFO - Epoch [34/50]  train_loss: 1.7207 train_acc: 0.5758
+2021-05-05 13:14:31,149 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.2557 val_acc: 0.0000
+2021-05-05 13:14:31,150 - [train_attntn.py:244-train()] - INFO - Epoch [34/50] train_bleu1: 0.7181 train_bleu2: 0.5468 train_bleu3: 0.4214 train_bleu4: 0.3271 train_meteor: 0.5109362739076662val_bleu1: 0.6167 val_bleu2: 0.4023 val_bleu3: 0.2634 val_bleu4: 0.1700 val_meteor: 0.39766909111589915
+2021-05-05 13:25:42,599 - [train_attntn.py:141-train_step()] - INFO - Epoch [35/50]  train_loss: 1.7017 train_acc: 0.5798
+2021-05-05 13:28:46,445 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.2219 val_acc: 0.0000
+2021-05-05 13:28:46,446 - [train_attntn.py:244-train()] - INFO - Epoch [35/50] train_bleu1: 0.7121 train_bleu2: 0.5439 train_bleu3: 0.4217 train_bleu4: 0.3297 train_meteor: 0.5148902467225681val_bleu1: 0.5987 val_bleu2: 0.3838 val_bleu3: 0.2477 val_bleu4: 0.1570 val_meteor: 0.38998247581319573
+2021-05-05 13:37:53,075 - [train_attntn.py:141-train_step()] - INFO - Epoch [36/50]  train_loss: 1.6856 train_acc: 0.5834
+2021-05-05 13:40:38,696 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.4406 val_acc: 0.0000
+2021-05-05 13:40:38,697 - [train_attntn.py:244-train()] - INFO - Epoch [36/50] train_bleu1: 0.6988 train_bleu2: 0.5245 train_bleu3: 0.4013 train_bleu4: 0.3118 train_meteor: 0.5084099532240405val_bleu1: 0.6038 val_bleu2: 0.3867 val_bleu3: 0.2496 val_bleu4: 0.1600 val_meteor: 0.3970728870742207
+2021-05-05 13:50:16,652 - [train_attntn.py:141-train_step()] - INFO - Epoch [37/50]  train_loss: 1.6645 train_acc: 0.5867
+2021-05-05 13:53:31,881 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.3422 val_acc: 0.0000
+2021-05-05 13:53:31,882 - [train_attntn.py:244-train()] - INFO - Epoch [37/50] train_bleu1: 0.7042 train_bleu2: 0.5357 train_bleu3: 0.4146 train_bleu4: 0.3250 train_meteor: 0.5199712478310795val_bleu1: 0.6005 val_bleu2: 0.3919 val_bleu3: 0.2546 val_bleu4: 0.1622 val_meteor: 0.4112914881364429
+2021-05-05 14:03:31,846 - [train_attntn.py:141-train_step()] - INFO - Epoch [38/50]  train_loss: 1.6491 train_acc: 0.5900
+2021-05-05 14:07:35,186 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.4375 val_acc: 0.0000
+2021-05-05 14:07:35,187 - [train_attntn.py:244-train()] - INFO - Epoch [38/50] train_bleu1: 0.7113 train_bleu2: 0.5447 train_bleu3: 0.4243 train_bleu4: 0.3343 train_meteor: 0.5181438649240939val_bleu1: 0.5955 val_bleu2: 0.3824 val_bleu3: 0.2438 val_bleu4: 0.1552 val_meteor: 0.3961904488411788
+2021-05-05 14:17:36,904 - [train_attntn.py:141-train_step()] - INFO - Epoch [39/50]  train_loss: 1.6262 train_acc: 0.5938
+2021-05-05 14:20:43,705 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.6436 val_acc: 0.0000
+2021-05-05 14:20:43,706 - [train_attntn.py:244-train()] - INFO - Epoch [39/50] train_bleu1: 0.7111 train_bleu2: 0.5430 train_bleu3: 0.4213 train_bleu4: 0.3311 train_meteor: 0.5307691442651682val_bleu1: 0.6107 val_bleu2: 0.3983 val_bleu3: 0.2584 val_bleu4: 0.1661 val_meteor: 0.41352288609744076
+2021-05-05 14:29:35,276 - [train_attntn.py:141-train_step()] - INFO - Epoch [40/50]  train_loss: 1.6118 train_acc: 0.5962
+2021-05-05 14:32:35,886 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.6515 val_acc: 0.0000
+2021-05-05 14:32:35,886 - [train_attntn.py:244-train()] - INFO - Epoch [40/50] train_bleu1: 0.7141 train_bleu2: 0.5476 train_bleu3: 0.4283 train_bleu4: 0.3396 train_meteor: 0.5240538830587339val_bleu1: 0.6002 val_bleu2: 0.3834 val_bleu3: 0.2472 val_bleu4: 0.1561 val_meteor: 0.3941499157668489
+2021-05-05 14:45:39,109 - [train_attntn.py:141-train_step()] - INFO - Epoch [41/50]  train_loss: 1.5981 train_acc: 0.5984
+2021-05-05 14:49:03,923 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.6549 val_acc: 0.0000
+2021-05-05 14:49:03,923 - [train_attntn.py:244-train()] - INFO - Epoch [41/50] train_bleu1: 0.7129 train_bleu2: 0.5437 train_bleu3: 0.4222 train_bleu4: 0.3316 train_meteor: 0.5156140162179348val_bleu1: 0.6128 val_bleu2: 0.4035 val_bleu3: 0.2660 val_bleu4: 0.1715 val_meteor: 0.4056965153776009
+2021-05-05 14:59:35,190 - [train_attntn.py:141-train_step()] - INFO - Epoch [42/50]  train_loss: 1.5801 train_acc: 0.6023
+2021-05-05 15:03:06,537 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.6255 val_acc: 0.0000
+2021-05-05 15:03:06,538 - [train_attntn.py:244-train()] - INFO - Epoch [42/50] train_bleu1: 0.7153 train_bleu2: 0.5498 train_bleu3: 0.4320 train_bleu4: 0.3443 train_meteor: 0.5302409685320959val_bleu1: 0.5949 val_bleu2: 0.3752 val_bleu3: 0.2366 val_bleu4: 0.1472 val_meteor: 0.3911175224977416
+2021-05-05 15:15:03,201 - [train_attntn.py:141-train_step()] - INFO - Epoch [43/50]  train_loss: 1.5631 train_acc: 0.6052
+2021-05-05 15:18:49,626 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.8746 val_acc: 0.0000
+2021-05-05 15:18:49,627 - [train_attntn.py:244-train()] - INFO - Epoch [43/50] train_bleu1: 0.6914 train_bleu2: 0.5236 train_bleu3: 0.4038 train_bleu4: 0.3164 train_meteor: 0.5242461902134061val_bleu1: 0.5837 val_bleu2: 0.3744 val_bleu3: 0.2432 val_bleu4: 0.1585 val_meteor: 0.4057159289443511
+2021-05-05 15:30:32,550 - [train_attntn.py:141-train_step()] - INFO - Epoch [44/50]  train_loss: 1.5489 train_acc: 0.6079
+2021-05-05 15:34:25,152 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.8214 val_acc: 0.0000
+2021-05-05 15:34:25,153 - [train_attntn.py:244-train()] - INFO - Epoch [44/50] train_bleu1: 0.7015 train_bleu2: 0.5352 train_bleu3: 0.4187 train_bleu4: 0.3331 train_meteor: 0.5273038724148822val_bleu1: 0.5941 val_bleu2: 0.3793 val_bleu3: 0.2424 val_bleu4: 0.1537 val_meteor: 0.3989236810274367
+2021-05-05 15:47:29,077 - [train_attntn.py:141-train_step()] - INFO - Epoch [45/50]  train_loss: 1.5303 train_acc: 0.6121
+2021-05-05 15:50:55,070 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.9056 val_acc: 0.0000
+2021-05-05 15:50:55,071 - [train_attntn.py:244-train()] - INFO - Epoch [45/50] train_bleu1: 0.6935 train_bleu2: 0.5304 train_bleu3: 0.4142 train_bleu4: 0.3286 train_meteor: 0.5325096641506909val_bleu1: 0.5890 val_bleu2: 0.3791 val_bleu3: 0.2434 val_bleu4: 0.1535 val_meteor: 0.4046626135008562
+2021-05-05 16:05:12,554 - [train_attntn.py:141-train_step()] - INFO - Epoch [46/50]  train_loss: 1.5195 train_acc: 0.6139
+2021-05-05 16:08:19,387 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.8826 val_acc: 0.0000
+2021-05-05 16:08:19,388 - [train_attntn.py:244-train()] - INFO - Epoch [46/50] train_bleu1: 0.7065 train_bleu2: 0.5432 train_bleu3: 0.4278 train_bleu4: 0.3425 train_meteor: 0.5397619170768317val_bleu1: 0.5829 val_bleu2: 0.3684 val_bleu3: 0.2356 val_bleu4: 0.1502 val_meteor: 0.39642149312820407
+2021-05-05 16:20:52,381 - [train_attntn.py:141-train_step()] - INFO - Epoch [47/50]  train_loss: 1.5033 train_acc: 0.6168
+2021-05-05 16:24:30,763 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 5.8522 val_acc: 0.0000
+2021-05-05 16:24:30,764 - [train_attntn.py:244-train()] - INFO - Epoch [47/50] train_bleu1: 0.7081 train_bleu2: 0.5450 train_bleu3: 0.4301 train_bleu4: 0.3458 train_meteor: 0.5382324269088837val_bleu1: 0.5867 val_bleu2: 0.3712 val_bleu3: 0.2369 val_bleu4: 0.1509 val_meteor: 0.40207620261224397
+2021-05-05 16:36:07,201 - [train_attntn.py:141-train_step()] - INFO - Epoch [48/50]  train_loss: 1.4935 train_acc: 0.6187
+2021-05-05 16:39:01,584 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 6.0768 val_acc: 0.0000
+2021-05-05 16:39:01,585 - [train_attntn.py:244-train()] - INFO - Epoch [48/50] train_bleu1: 0.7039 train_bleu2: 0.5438 train_bleu3: 0.4303 train_bleu4: 0.3468 train_meteor: 0.5425495426328675val_bleu1: 0.5815 val_bleu2: 0.3712 val_bleu3: 0.2387 val_bleu4: 0.1522 val_meteor: 0.40598423289633534
+2021-05-05 16:47:44,072 - [train_attntn.py:141-train_step()] - INFO - Epoch [49/50]  train_loss: 1.4812 train_acc: 0.6217
+2021-05-05 16:50:28,403 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 6.0475 val_acc: 0.0000
+2021-05-05 16:50:28,404 - [train_attntn.py:244-train()] - INFO - Epoch [49/50] train_bleu1: 0.7328 train_bleu2: 0.5732 train_bleu3: 0.4578 train_bleu4: 0.3714 train_meteor: 0.5426468719990928val_bleu1: 0.6132 val_bleu2: 0.3943 val_bleu3: 0.2554 val_bleu4: 0.1626 val_meteor: 0.40037614514442893
+2021-05-05 16:58:55,433 - [train_attntn.py:141-train_step()] - INFO - Epoch [50/50]  train_loss: 1.4655 train_acc: 0.6245
+2021-05-05 17:01:36,700 - [train_attntn.py:186-evaluate_model()] - INFO - val_loss: 6.1198 val_acc: 0.0000
+2021-05-05 17:01:36,700 - [train_attntn.py:244-train()] - INFO - Epoch [50/50] train_bleu1: 0.7022 train_bleu2: 0.5382 train_bleu3: 0.4225 train_bleu4: 0.3377 train_meteor: 0.536276277030682val_bleu1: 0.5839 val_bleu2: 0.3700 val_bleu3: 0.2327 val_bleu4: 0.1463 val_meteor: 0.3996303169110577
+2021-05-05 17:01:45,351 - [train_attntn.py:279-test()] - INFO - Start testing specified model

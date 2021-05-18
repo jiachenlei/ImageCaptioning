@@ -1,8 +1,9 @@
 import os
-
+import logging
 import numpy as np
 from tqdm.auto import tqdm
 
+logger = logging.getLogger(__name__)
 
 # GLOVE_DIR = path for glove.6B.100d.txt
 def glove_dictionary(GLOVE_DIR, dim=200):
@@ -18,6 +19,8 @@ def glove_dictionary(GLOVE_DIR, dim=200):
 
 
 def embedding_matrix_creator(embedding_dim, word2idx, GLOVE_DIR='data/glove.6B/'):
+    logger.info("Preparing embedding matrix")
+
     embeddings_index = glove_dictionary(GLOVE_DIR=GLOVE_DIR, dim=embedding_dim)
     embedding_matrix = np.zeros((len(word2idx), embedding_dim))
     for word, i in tqdm(word2idx.items()):
@@ -25,4 +28,6 @@ def embedding_matrix_creator(embedding_dim, word2idx, GLOVE_DIR='data/glove.6B/'
         if embedding_vector is not None:
             # words not found in embedding index will be all-zeros.
             embedding_matrix[i] = embedding_vector
+
+    logger.info("Finish embedding matrix preparation")
     return embedding_matrix

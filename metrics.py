@@ -1,7 +1,7 @@
 import torch
 from nltk.translate.bleu_score import SmoothingFunction
 from nltk.translate.bleu_score import corpus_bleu, sentence_bleu
-
+from nltk.translate.meteor_score import meteor_score as _meteor_score
 
 def bleu_score_fn(method_no: int = 4, ref_type='corpus'):
     """
@@ -43,3 +43,28 @@ def accuracy_fn(ignore_value: int = 0):
         return (source[mask] == target[mask]).sum().item() / mask.sum().item()
 
     return accuracy_ignoring_value
+
+
+def meteor_score_fn():
+
+    def fn(references, candidate):
+        concate_can = []
+        concate_ref = []
+        meteor_score = 0.0
+        # transform tokenized output to string [batch number of string]
+        for idx, c in enumerate(candidate):
+            concate_can.append(" ".join(c))
+
+            _a = []
+            for r in references[idx]:
+                _a.append(" ".join(r))
+            concate_ref.append(_a)
+
+        for idx, c in enumerate(concate_can):
+            meteor_score += _meteor_score(concate_ref[idx], c)
+
+        meteor_score /= len(concate_can)
+
+        return meteor_score
+    
+    return fn

@@ -8,7 +8,8 @@ class Encoder(nn.Module):
     def __init__(self, embed_size):
         """Load the pretrained ResNet-50 and replace top fc layer."""
         super(Encoder, self).__init__()
-        resnet = torch.hub.load('pytorch/vision:v0.6.0', 'resnet50', pretrained=True)
+        resnet = torch.hub.load('./pretrained_model', 'resnet50', pretrained=True, source="local")
+
         modules = list(resnet.children())[:-1]
         self.resnet = nn.Sequential(*modules)
         self.embed = nn.Sequential(

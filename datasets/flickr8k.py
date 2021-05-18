@@ -4,6 +4,8 @@ import ntpath
 import os
 
 import nltk
+nltk.data.path.append("/mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/package/nltk_data/")
+
 import pandas as pd
 import torch
 from PIL import Image
@@ -15,8 +17,20 @@ from utils_torch import split_data
 
 class Flickr8kDataset(Dataset):
     """
-    imgname: just image file name
-    imgpath: full path to image file
+    create a dataset for Flickr8k
+    :param dataset_base_path: path of directory that contains Flicker8k_Dataset and Flickr8k_text
+    :param vocab_set: a tuple type vocabulary set that contains vocabulary, word2idx, idx2word, max_len
+    :param dist: indicates either it's dataset for training or validation or testing
+    :param startseq: word that indicates start of a sentence
+    :param endseq: word that indicates end of a sentence
+    :param unkseq: word that indicates unknown word in a sentence
+    :param padseq: word that indicates padding symbol in a sentence
+    :param transformations: transformations to be implemented on dataset
+    :param return_raw: 
+    :param load_img_to_memory: whether load image to memory ahead of time or not
+    :param return_type: return tensor type for training or corpus type for validation and test
+    :param device: cuda or cpu
+    :return: a torch.utils.data.Dataset object
     """
 
     def __init__(self, dataset_base_path='data/flickr8k/',
@@ -27,15 +41,21 @@ class Flickr8kDataset(Dataset):
                  load_img_to_memory=False,
                  return_type='tensor',
                  device=torch.device('cpu')):
+        # e.g. 
+        # 1305564994_00513f9a5b.jpg#0 A man in street racer armor be examine the tire of another racer 's motorbike .
+        # 1000268201_693b08cb0e.jpg#1 A girl going into a wooden building .
+        # ...
         self.token = dataset_base_path + 'Flickr8k_text/Flickr8k.token.txt'
+        # path of the image files
         self.images_path = dataset_base_path + 'Flicker8k_Dataset/'
-
+        # path of trainning set/validation set/test set
         self.dist_list = {
             'train': dataset_base_path + 'Flickr8k_text/Flickr_8k.trainImages.txt',
             'val': dataset_base_path + 'Flickr8k_text/Flickr_8k.devImages.txt',
             'test': dataset_base_path + 'Flickr8k_text/Flickr_8k.testImages.txt'
         }
-
+        # whether load image to memory ahead of time or not (before __getitem__ is called)
+        # pil_d is a dict stores imagename -> image bit file
         self.load_img_to_memory = load_img_to_memory
         self.pil_d = None
 
@@ -44,10 +64,11 @@ class Flickr8kDataset(Dataset):
 
         self.return_raw = return_raw
         self.return_type = return_type
-
+        # used in __getitem__
         self.__get_item__fn = self.__getitem__corpus if return_type == 'corpus' else self.__getitem__tensor
-
+        # list all the paths for all images in directory image_path
         self.imgpath_list = glob.glob(self.images_path + '*.jpg')
+        # get a dict object that maps image names in dist to corresponding captions
         self.all_imgname_to_caplist = self.__all_imgname_to_caplist_dict()
         self.imgname_to_caplist = self.__get_imgname_to_caplist_dict(self.__get_imgpath_list(dist=dist))
 
@@ -67,6 +88,12 @@ class Flickr8kDataset(Dataset):
         self.db = self.get_db()
 
     def __all_imgname_to_caplist_dict(self):
+        """
+        get a dict object that maps all image names (including training set/validation set/test set) 
+        to corresponding captions
+        :param
+        :return: a dict object
+        """
         captions = open(self.token, 'r').read().strip().split('\n')
         imgname_to_caplist = {}
         for i, row in enumerate(captions):
@@ -79,6 +106,12 @@ class Flickr8kDataset(Dataset):
         return imgname_to_caplist
 
     def __get_imgname_to_caplist_dict(self, img_path_list):
+        """
+        get a dict object that maps all image names in img_path_list
+        to corresponding captions. This function clean image files and tokens that do not match
+        :param: img_path_list: list object that contains path of images in trainning set or validation set or test set
+        :return: a dict object
+        """
         d = {}
         for i in img_path_list:
             if i[len(self.images_path):] in self.all_imgname_to_caplist:
@@ -91,13 +124,18 @@ class Flickr8kDataset(Dataset):
         return dist_imgpathlist
 
     def __construct_vocab(self):
+        """
+        construct a vocabulary with the dataset
+        :param: 
+        :return: a tuple object that contains vocabulary(list), word2idx(dict), idx2word(dict), max_len(int)
+        """
         words = [self.startseq, self.endseq, self.unkseq, self.padseq]
         max_len = 0
         for _, caplist in self.imgname_to_caplist.items():
             for cap in caplist:
                 cap_words = nltk.word_tokenize(cap.lower())
                 words.extend(cap_words)
-                max_len = max(max_len, len(cap_words) + 2)
+                max_len = max(max_len, len(cap_words) + 2)  # determine the maximum length of caption
         vocab = sorted(list(set(words)))
 
         word2idx = {word: index for index, word in enumerate(vocab)}
@@ -109,7 +147,13 @@ class Flickr8kDataset(Dataset):
         return self.vocab, self.word2idx, self.idx2word, self.max_len
 
     def get_db(self):
-
+        """
+        construct a database with the dataset
+        :param: 
+        :return: a list object that contains list of imagename, tokenized caption list, length of each caption in caption list
+                    or a numpy.ndarray object that formats like token file: imagefile, caption, length of caption
+        """
+        # load images to memory ahead of time (before __getitem__ is called)
         if self.load_img_to_memory:
             self.pil_d = {}
             for imgname in self.imgname_to_caplist.keys():
@@ -143,7 +187,8 @@ class Flickr8kDataset(Dataset):
 
     @property
     def pad_value(self):
-        return 0
+        # return 0
+        return self.word2idx[self.padseq]
 
     def __getitem__(self, index: int):
         return self.__get_item__fn(index)

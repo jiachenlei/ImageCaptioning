@@ -1,0 +1,36 @@
+2021-04-25 11:54:47,904 INFO    MainThread:1973 [wandb_setup.py:_flush():69] setting env: {}
+2021-04-25 11:54:47,905 INFO    MainThread:1973 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-04-25 11:54:47,905 INFO    MainThread:1973 [wandb_setup.py:_flush():69] setting login settings: {'api_key': '1365cf34d0d23f131d899c9acac5f4d9b9b5d21a'}
+2021-04-25 11:54:47,906 INFO    MainThread:1973 [wandb_init.py:_log_setup():336] Logging user logs to /mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/wandb/run-20210425_115447-3fiu6vlf/logs/debug.log
+2021-04-25 11:54:47,908 INFO    MainThread:1973 [wandb_init.py:_log_setup():337] Logging internal logs to /mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/wandb/run-20210425_115447-3fiu6vlf/logs/debug-internal.log
+2021-04-25 11:54:47,908 INFO    MainThread:1973 [wandb_init.py:init():369] calling init triggers
+2021-04-25 11:54:47,908 INFO    MainThread:1973 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'epochs': 2, 'batch_size': 128, 'model': 'resnet101_attention', 'embedding': '300', 'embedding_dim': 300, 'attention_dim': 256, 'decoder_dim': 256}
+2021-04-25 11:54:47,908 INFO    MainThread:1973 [wandb_init.py:init():418] starting backend
+2021-04-25 11:54:47,909 INFO    MainThread:1973 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-04-25 11:54:48,071 INFO    MainThread:1973 [backend.py:ensure_launched():123] starting backend process...
+2021-04-25 11:54:48,087 INFO    MainThread:1973 [backend.py:ensure_launched():127] started backend process with pid: 2006
+2021-04-25 11:54:48,089 INFO    MainThread:1973 [wandb_init.py:init():423] backend started and connected
+2021-04-25 11:54:48,091 INFO    MainThread:1973 [wandb_init.py:init():465] updated telemetry
+2021-04-25 11:54:48,092 INFO    MainThread:1973 [wandb_init.py:init():484] communicating current version
+2021-04-25 11:54:49,279 INFO    MainThread:1973 [wandb_init.py:init():489] got version response 
+2021-04-25 11:54:49,280 INFO    MainThread:1973 [wandb_init.py:init():497] communicating run to backend with 30 second timeout
+2021-04-25 11:55:08,426 WARNING MainThread:1973 [wandb_init.py:init():764] interrupted
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 744, in init
+    run = wi.init()
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 498, in init
+    ret = backend.interface.communicate_run(run, timeout=30)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 652, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 640, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 533, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 82, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/root/miniconda3/envs/myconda/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

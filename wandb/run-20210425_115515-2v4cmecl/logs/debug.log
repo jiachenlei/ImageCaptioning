@@ -1,0 +1,23 @@
+2021-04-25 11:55:15,128 INFO    MainThread:2032 [wandb_setup.py:_flush():69] setting env: {}
+2021-04-25 11:55:15,128 INFO    MainThread:2032 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-04-25 11:55:15,128 INFO    MainThread:2032 [wandb_init.py:_log_setup():336] Logging user logs to /mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/wandb/run-20210425_115515-2v4cmecl/logs/debug.log
+2021-04-25 11:55:15,129 INFO    MainThread:2032 [wandb_init.py:_log_setup():337] Logging internal logs to /mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/wandb/run-20210425_115515-2v4cmecl/logs/debug-internal.log
+2021-04-25 11:55:15,129 INFO    MainThread:2032 [wandb_init.py:init():369] calling init triggers
+2021-04-25 11:55:15,129 INFO    MainThread:2032 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'epochs': 2, 'batch_size': 128, 'model': 'resnet101_attention', 'embedding': '300', 'embedding_dim': 300, 'attention_dim': 256, 'decoder_dim': 256}
+2021-04-25 11:55:15,129 INFO    MainThread:2032 [wandb_init.py:init():418] starting backend
+2021-04-25 11:55:15,130 INFO    MainThread:2032 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-04-25 11:55:15,156 INFO    MainThread:2032 [backend.py:ensure_launched():123] starting backend process...
+2021-04-25 11:55:15,174 INFO    MainThread:2032 [backend.py:ensure_launched():127] started backend process with pid: 2064
+2021-04-25 11:55:15,175 INFO    MainThread:2032 [wandb_init.py:init():423] backend started and connected
+2021-04-25 11:55:15,177 INFO    MainThread:2032 [wandb_init.py:init():465] updated telemetry
+2021-04-25 11:55:15,178 INFO    MainThread:2032 [wandb_init.py:init():484] communicating current version
+2021-04-25 11:55:16,470 INFO    MainThread:2032 [wandb_init.py:init():489] got version response 
+2021-04-25 11:55:16,470 INFO    MainThread:2032 [wandb_init.py:init():497] communicating run to backend with 30 second timeout
+2021-04-25 11:55:46,472 INFO    MainThread:2032 [interface.py:_communicate_run():642] couldn't get run from backend
+2021-04-25 11:55:46,473 ERROR   MainThread:2032 [wandb_init.py:init():501] backend process timed out
+2021-04-25 11:55:46,473 ERROR   MainThread:2032 [wandb_init.py:init():510] encountered error: Error communicating with wandb process
+try: wandb.init(settings=wandb.Settings(start_method='fork'))
+or:  wandb.init(settings=wandb.Settings(start_method='thread'))
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2021-04-25 11:55:51,510 INFO    MainThread:2032 [wandb_init.py:teardown():187] tearing down wandb.init

@@ -6,7 +6,10 @@ import torch
 from torch import nn
 import torchvision
 
-from models.torch.layers import embedding_layer
+if __name__ == "__main__" or __name__ == "resnet101_attention":
+    from layers import embedding_layer
+else:
+    from .layers import embedding_layer
 
 
 class Encoder(nn.Module):
@@ -14,11 +17,11 @@ class Encoder(nn.Module):
     Encoder.
     """
 
-    def __init__(self, encoded_image_size=14):
+    def __init__(self, encoded_image_size=14, hubpath = "/mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/pretrained_model", pretrained = True):
         super(Encoder, self).__init__()
         self.enc_image_size = encoded_image_size
 
-        resnet = torchvision.models.resnet101(pretrained=True)  # pretrained ImageNet ResNet-101
+        resnet = torch.hub.load(hubpath, 'resnet101', pretrained=pretrained, source = "local")
 
         # Remove linear and pool layers (since we're not doing classification)
         modules = list(resnet.children())[:-2]
@@ -38,6 +41,7 @@ class Encoder(nn.Module):
         """
         # (batch_size, 2048, image_size/32, image_size/32)
         out = self.resnet(images)
+        # print(out.shape)
         # (batch_size, 2048, encoded_image_size, encoded_image_size)
         out = self.adaptive_pool(out)
         # (batch_size, encoded_image_size, encoded_image_size, 2048)
@@ -241,6 +245,7 @@ class DecoderWithAttention(nn.Module):
 
         # [b, 1]
         prev_timestamp_words = torch.LongTensor([[startseq_idx]] * batch_size).to(encoder_out.device)
+
         for i in range(max_len):
             # [b, 1] -> [b, embed_dim]
             embeddings = self.embedding(prev_timestamp_words).squeeze(1)
@@ -273,9 +278,9 @@ class DecoderWithAttention(nn.Module):
 
 class Captioner(nn.Module):
     def __init__(self, encoded_image_size, attention_dim, embed_dim, decoder_dim, vocab_size, encoder_dim=2048,
-                 dropout=0.5, **kwargs):
+                 dropout=0.5, pretrained = True, **kwargs):
         super().__init__()
-        self.encoder = Encoder(encoded_image_size=encoded_image_size)
+        self.encoder = Encoder(encoded_image_size=encoded_image_size, pretrained = pretrained)
         self.decoder = DecoderWithAttention(attention_dim, embed_dim, decoder_dim, vocab_size,
                                             encoder_dim, dropout)
 
@@ -294,3 +299,9 @@ class Captioner(nn.Module):
         encoder_out = self.encoder(images)
         return self.decoder.sample(encoder_out=encoder_out, startseq_idx=startseq_idx, max_len=max_len,
                                    return_alpha=return_alpha)
+
+
+if __name__ == "__main__":
+    input = torch.randn((1,3,256,256))
+    encoder = Encoder()
+    out = encoder(input)

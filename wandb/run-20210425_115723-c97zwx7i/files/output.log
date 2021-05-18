@@ -1,0 +1,1 @@
+FileNotFoundError: [Errno 2] No such file or directory: 'data/glove.6B/glove.6B.300d.txt'
