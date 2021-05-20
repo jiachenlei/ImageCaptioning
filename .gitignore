@@ -10,4 +10,4 @@
 
 .pretrained_model/*
 
-
+.ipynb_checkpoints
