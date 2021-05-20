@@ -1,8 +1,0 @@
-2021-04-28 13:38:33,925 - [train_attntn.py:25-<module>()] - INFO - Start Initialization
-2021-04-28 13:38:33,956 - [train_attntn.py:44-parepareDataset()] - INFO - Prepare dataset for training
-2021-04-28 13:38:48,822 - [train_attntn.py:83-parepareDataset()] - INFO - Dataset Preparation Complete
-2021-04-28 13:38:48,825 - [train_attntn.py:90-prepareLoader()] - INFO - Prepare dataloader for training
-2021-04-28 13:38:48,825 - [train_attntn.py:101-prepareLoader()] - INFO - Dataloader Preparation Complete
-2021-04-28 13:38:48,826 - [glove.py:22-embedding_matrix_creator()] - INFO - Preparing embedding matrix
-2021-04-28 13:39:35,815 - [glove.py:32-embedding_matrix_creator()] - INFO - Finish embedding matrix preparation
-2021-04-28 13:39:42,353 - [train_attntn.py:193-train()] - INFO - Start training
