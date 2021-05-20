@@ -14,7 +14,10 @@ Pretrained Resnet50 Resnext50 Res2net50 Inception-v3 and Res2next & LSTM with at
 ```
 python train_attntn.py --name 0503 --model resnet101_attention
 ```
-where name represents part of the name of the model (other parts includes: model,e.g. resnet101, hidden dimension, e.g. 300 ,etc)
+where name represents part of the name of the model (other parts includes: model,e.g. resnet101, hidden dimension, e.g. 300 ,etc)  
+
+You can modify the basic settting of training (e.g. learning rate) in config/global_config.yaml
+
 ```
 data/
     flickr8k/
