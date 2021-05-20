@@ -1,12 +1,7 @@
 # Image-Captioning-PyTorch
-This repo contains codes to preprocess, train and evaluate sequence models on Flickr8k Image dataset in pytorch. This repo was a part of a Deep Learning Project for the Machine Learning Sessional course of Department of CSE, BUET for the session January-2020.
-
-**Models Experimented with**:
-- Pretrained CNN encoder & LSTM based Decoder
-    - VGG-16, Inception-v3, Resnet-50, Resnet-101, Resnext-101, Densenet-201
-- Pretrained Resnet-101 & LSTM with Attention Mechanism
-
-Open [`Pretrained Attention Model's Notebook`](demo_attention_flickr8k.ipynb) or [`Pretrained MonoLSTM Model's Notebook`](demo_monolstm_flickr8k.ipynb) in colab and execute from top to bottom.  
+This repo contains codes to preprocess, train and evaluate sequence models on Flickr8k Image dataset in pytorch. This repo is a fork of  "https://github.com/Subangkar/Image-Captioning-Attention-PyTorch".  
+  
+Pretrained Resnet50 Resnext50 Res2net50 Inception-v3 and Res2next & LSTM with attention were added. And part of the code arcitecture was modified
 
 **Pre-requisites**:
  - Datasets:
@@ -15,6 +10,11 @@ Open [`Pretrained Attention Model's Notebook`](demo_attention_flickr8k.ipynb) or
     - [Glove Embeddings of 6B words](http://nlp.stanford.edu/data/glove.6B.zip)
 
 **Data Folder Structure for training using [`train_torch.py`](train_torch.py) or [`train_attntn.py`](train_attntn.py):**
+**Train model with pretrained backbone by:**
+```
+python train_attntn.py --name 0503 --model resnet101_attention
+```
+where name represents part of the name of the model (other parts includes: model,e.g. resnet101, hidden dimension, e.g. 300 ,etc)
 ```
 data/
     flickr8k/
@@ -31,9 +31,3 @@ data/
         glove.6B.200d.txt
         glove.6B.300d.txt
 ```
-
-**Pretrained Models**:  
-Some pre-trained weights are provided [here](https://drive.google.com/drive/folders/16e_bNz92M5g3Myp2kKbGZcXIkDTjasP-?usp=sharing)
-
-**Bleu score comparision of trained models**:
-![alt text](artifacts/bleu_scores.png "Bleu Scores Comparision of some trained models")
