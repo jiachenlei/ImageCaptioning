@@ -1,0 +1,6 @@
+2021-05-20 22:55:36,848 - [train_attntn.py:25-<module>()] - INFO - Start Initialization
+2021-05-20 22:55:40,573 - [train_attntn.py:53-parepareDataset()] - INFO - Prepare dataset for training
+2021-05-20 22:55:45,061 - [train_attntn.py:93-parepareDataset()] - INFO - Dataset Preparation Complete
+2021-05-20 22:55:45,063 - [train_attntn.py:100-prepareLoader()] - INFO - Prepare dataloader for training
+2021-05-20 22:55:45,064 - [train_attntn.py:112-prepareLoader()] - INFO - Dataloader Preparation Complete
+2021-05-20 22:55:48,241 - [train_attntn.py:221-train()] - INFO - Start training

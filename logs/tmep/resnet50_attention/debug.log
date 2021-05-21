@@ -1,0 +1,2 @@
+2021-05-20 21:34:03,844 - [train_attntn.py:25-<module>()] - INFO - Start Initialization
+2021-05-20 21:34:07,495 - [train_attntn.py:53-parepareDataset()] - INFO - Prepare dataset for training

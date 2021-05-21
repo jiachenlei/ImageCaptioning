@@ -1,4 +1,4 @@
-DATASET_BASE_PATH : 'data/flickr8k/'
+DATASET_BASE_PATH : '/mnt/traffic/leijiachen/data/flickr8k/'
 
 EMBEDDING_DIM : 300
 ATTENTION_DIM : 256

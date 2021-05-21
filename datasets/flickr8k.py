@@ -4,7 +4,7 @@ import ntpath
 import os
 
 import nltk
-nltk.data.path.append("/mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/package/nltk_data/")
+nltk.data.path.append("/mnt/traffic/leijiachen/data/nltk_data/")
 
 import pandas as pd
 import torch
@@ -33,7 +33,7 @@ class Flickr8kDataset(Dataset):
     :return: a torch.utils.data.Dataset object
     """
 
-    def __init__(self, dataset_base_path='data/flickr8k/',
+    def __init__(self, dataset_base_path='../../data/flickr8k/',
                  vocab_set=None, dist='val',
                  startseq="<start>", endseq="<end>", unkseq="<unk>", padseq="<pad>",
                  transformations=None,
