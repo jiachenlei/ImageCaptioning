@@ -93,8 +93,6 @@ def evaluate_model(data_loader, model, loss_fn, word2idx, vocab_size, bleu_score
 
             t.set_postfix({
                 'bleu1': running_bleu[1] / (batch_idx + 1),
-                'bleu2': running_bleu[2] / (batch_idx + 1),
-                'bleu3': running_bleu[3] / (batch_idx + 1),
                 'bleu4': running_bleu[4] / (batch_idx + 1),
                 'meteor': running_meteor / (batch_idx + 1),
             }, refresh=True)
@@ -113,9 +111,8 @@ def test():
     test_set, word2idx, idx2word, vocab_size = parepareDataset(device)
     test_loader = prepareLoader(test_set, vocab_size)
     # Word embedding
-
-    embedding_matrix = None
     # embedding_matrix = embedding_matrix_creator(embedding_dim=EMBEDDING_DIM, word2idx=word2idx)
+    embedding_matrix = None
     # Model
     Captioner = _torch.__dict__[args.model]
     model = Captioner(encoded_image_size=14, encoder_dim=2048,
@@ -147,6 +144,7 @@ def test():
             f'test_meteor: {test_meteor}'
             )
 
+    
 
 
 def main():
