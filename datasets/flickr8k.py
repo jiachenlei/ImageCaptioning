@@ -4,7 +4,7 @@ import ntpath
 import os
 
 import nltk
-nltk.data.path.append("/mnt/traffic/leijiachen/data/nltk_data/")
+nltk.data.path.append("/mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/package/nltk_data")
 
 import pandas as pd
 import torch
