@@ -19,6 +19,24 @@ Pretrained Resnet50 Resnext50 Res2net50 Inception-v3 and Res2next & LSTM with at
   - [Glove Embeddings of 6B words](http://nlp.stanford.edu/data/glove.6B.zip)
 
 
+**Expected structure of the files in ./data**
+```
+data/
+  flickr8k/
+​    Flicker8k_Dataset/
+​      *.jpg
+​    Flickr8k_text/
+​      Flickr8k.token.txt
+​      Flickr_8k.devImages.txt
+​      Flickr_8k.testImages.txt
+​      Flickr_8k.trainImages.txt
+  glove.6B/
+​    glove.6B.50d.txt
+​    glove.6B.100d.txt
+​    glove.6B.200d.txt
+​    glove.6B.300d.txt
+```
+
 
 **Data Folder Structure for training using [`train_torch.py`](train_torch.py) or [`train_attntn.py`](train_attntn.py):**
 
@@ -66,36 +84,3 @@ python utils_plot.py -name 0503 -model resnet101_attention
 And the visualization results will be saved in ./visualization
 
 You can modify the basic settting of training (e.g. learning rate) in config/global_config.yaml
-
-
-```
-
-data/
-
-  flickr8k/
-
-​    Flicker8k_Dataset/
-
-​      *.jpg
-
-​    Flickr8k_text/
-
-​      Flickr8k.token.txt
-
-​      Flickr_8k.devImages.txt
-
-​      Flickr_8k.testImages.txt
-
-​      Flickr_8k.trainImages.txt
-
-  glove.6B/
-
-​    glove.6B.50d.txt
-
-​    glove.6B.100d.txt
-
-​    glove.6B.200d.txt
-
-​    glove.6B.300d.txt
-
-```
