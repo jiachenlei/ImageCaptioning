@@ -15,6 +15,7 @@ from utils import parseArgument
 from metrics import meteor_score_fn as _meteor_score_fn
 
 import models.torch as _torch
+import os
 
 args = parseArgument(mode = 'test')
 # Set global value according to configuration and process command-line arguments
@@ -80,12 +81,16 @@ def evaluate_model(data_loader, model, loss_fn, word2idx, vocab_size, bleu_score
     
     model.eval()
     t = tqdm(iter(data_loader), desc=f'{desc}')
+    
     with torch.no_grad():
         for batch_idx, batch in enumerate(t):
             images, captions, lengths = batch
 
             outputs = tensor_to_word_fn(model.sample(images, startseq_idx=word2idx['<start>']).cpu().numpy())
-
+            
+            with open(f"./captions/{args.name}_{args.model}_captions", "a+") as f:
+                f.write(outputs)
+                
             for i in (1, 2, 3, 4):
                 running_bleu[i] += bleu_score_fn(reference_corpus=captions, candidate_corpus=outputs, n=i)
 
@@ -108,6 +113,7 @@ def evaluate_model(data_loader, model, loss_fn, word2idx, vocab_size, bleu_score
 
 
 def test():
+
     # Dataset and DataLoader
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     test_set, word2idx, idx2word, vocab_size = parepareDataset(device)
@@ -132,6 +138,11 @@ def test():
 
     print("Start testing")
 
+    if os.path.exists(f"./captions/{args.name}_{args.model}_captions"):
+        # clear the content of the file
+        with open(f"./captions/{args.name}_{args.model}_captions", "w") as f:
+            pass
+
     test_bleu, test_meteor = evaluate_model(
                                 desc = f'\tTest Bleu Score: ',
                                 model = model,
@@ -150,7 +161,6 @@ def test():
 
 
 def main():
-
     test()
 
 

@@ -17,7 +17,7 @@ class Encoder(nn.Module):
     Encoder.
     """
 
-    def __init__(self, encoded_image_size=14, hubpath = "/mnt/imagecaptioning/Image-Captioning-Attention-PyTorch/pretrained_model", pretrained = True):
+    def __init__(self, encoded_image_size=14, hubpath = "/mnt/traffic/leijiachen/Imagecaptioning/pretrained_model", pretrained = True):
         super(Encoder, self).__init__()
         self.enc_image_size = encoded_image_size
 

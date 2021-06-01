@@ -126,7 +126,6 @@ def _main():
         image = image.squeeze(0)
         visualize_att(image, cap_idx, alphas, idx2word, _path + f"{idx}.png")
         
-        break
         
 
 if __name__ == "__main__":
