@@ -2,6 +2,8 @@ import itertools
 
 import numpy as np
 from PIL import Image
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt, cm as cm
 import skimage
 import skimage.transform
@@ -40,15 +42,15 @@ def parepareDataset(device):
                             load_img_to_memory=False)
     
     # Dataset Transformation
-    eval_transformations = transforms.Compose([
-        transforms.Resize(256),  # smaller edge of image resized to 256
-        transforms.CenterCrop(256),  # get 256x256 crop from random location
-        transforms.ToTensor(),  # convert the PIL Image to a tensor
-        transforms.Normalize((0.485, 0.456, 0.406),  # normalize image for pre-trained model
-                            (0.229, 0.224, 0.225))
-    ])
+#     eval_transformations = transforms.Compose([
+#         transforms.Resize(256),  # smaller edge of image resized to 256
+#         transforms.CenterCrop(256),  # get 256x256 crop from random location
+#         transforms.ToTensor(),  # convert the PIL Image to a tensor
+#         transforms.Normalize((0.485, 0.456, 0.406),  # normalize image for pre-trained model
+#                             (0.229, 0.224, 0.225))
+#     ])
 
-    test_set.transformations = eval_transformations
+#     test_set.transformations = eval_transformations
 
     vocab_size = len(vocab)
     print("Dataset Preparation Complete")
@@ -73,7 +75,7 @@ def visualize_att(image, seq, alphas, idx2word, save_path, endseq='<end>', smoot
     # words = [idx2word[ind] for ind in seq]
     words = list(itertools.takewhile(lambda word: word != endseq,
                                      map(lambda idx: idx2word[idx], iter(seq))))
-
+    plt.figure()
     for t in range(len(words)):
         if t > 50:
             break
@@ -83,16 +85,16 @@ def visualize_att(image, seq, alphas, idx2word, save_path, endseq='<end>', smoot
         plt.imshow(image)
         current_alpha = alphas[t, :]
         if smooth:
-            alpha = skimage.transform.pyramid_expand(current_alpha.numpy(), upscale=24, sigma=8)
+            alpha = skimage.transform.pyramid_expand(current_alpha.cpu().detach().numpy(), upscale=24, sigma=8)
         else:
-            alpha = skimage.transform.resize(current_alpha.numpy(), [14 * 24, 14 * 24])
+            alpha = skimage.transform.resize(current_alpha.cpu().detach().numpy(), [14 * 24, 14 * 24])
         if t == 0:
             plt.imshow(alpha, alpha=0)
         else:
             plt.imshow(alpha, alpha=0.8)
         plt.set_cmap(cm.Greys_r)
         plt.axis('off')
-    plt.save_fit(save_path)
+    plt.savefig(save_path)
 
     
 def _main():
@@ -108,6 +110,7 @@ def _main():
                             pretrained = False,
                             embedding_matrix=embedding_matrix, train_embd=False).to(device)
     model.load_state_dict(torch.load(f"{MODEL_NAME}_best_val.pt")["state_dict"])
+    model.eval()
     # Metrics
     print("Start generating plots")
     _path = f"./visualization/{args.name}_{args.model}"
@@ -121,6 +124,7 @@ def _main():
         sampled_ids = sampled_ids.squeeze(0)
         # [max_len, patch_size, patch_size]
         alphas = alphas.squeeze(0)
+        cap_idx = []
         cap_idx = [c for c in sampled_ids.tolist() if c != word2idx["<end>"] and c != word2idx["."]]
         
         image = image.squeeze(0)
